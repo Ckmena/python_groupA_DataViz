@@ -8,7 +8,7 @@ ratings = [] #push the ratings data here
 
 #open the cvs file and parse it 
 with open ("data/googeplaystore.csv") as csvfile:
-    reader =csv.reader(csvfile)
+    reader = csv.reader(csvfile)
     line_count = 0
 
     for row in reader:
@@ -21,7 +21,6 @@ with open ("data/googeplaystore.csv") as csvfile:
         ratingsData = (row[2])
         ratingsData = ratingsData.replace("NaN", "0")
         ratings.append(float(ratingsData))
-
 
         #print('collect the rest of the data') 
         installData = row[5]
