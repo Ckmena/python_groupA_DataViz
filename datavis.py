@@ -7,8 +7,8 @@ installs = [] # push the installs data here
 ratings = [] #push the ratings data here
 
 #open the cvs file and parse it 
-with open ("data/googleplaystore.csv") as csvfile:
-    reader = csv.reader(csvfile)
+with open ("data/googeplaystore.csv") as csvfile:
+    reader =csv.reader(csvfile)
     line_count = 0
 
     for row in reader:
@@ -37,6 +37,7 @@ print('last line', ratings[-1])
 #print('last line', installs [-1])
 
 np_ratings = np.array(ratings)
+
 popular_apps = np_ratings > 4
 pop_pct = int(len(np_ratings[popular_apps]) / len(np_ratings) * 100)
 print(pop_pct)
